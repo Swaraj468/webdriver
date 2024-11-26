@@ -1,6 +1,7 @@
 package exampractice;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -29,6 +30,9 @@ public class dropdownhandling {
 	    driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[6]/input")).sendKeys("8235107591");
 	    driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[7]/input")).sendKeys("swaraj09");
 	    driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[8]/input")).sendKeys("swarajbandhi0000@gmail.com");
+	    WebElement files=driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[9]/input"));
+	      String filePath = "C:\\Users\\swara\\Downloads\\appium1.txt";
+	      files.sendKeys(filePath);
 	    driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[10]/textarea")).sendKeys("Hello My name is swaraj");
 	    driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[11]/input")).sendKeys("swaraj1234");
 	    driver.findElement(By.xpath("//*[@id=\"register_form\"]/fieldset[12]/input")).sendKeys("swaraj1234");
