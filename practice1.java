@@ -9,12 +9,12 @@ public class practice1 {
 		// TODO Auto-generated method stub
 		EdgeDriver driver = new EdgeDriver();
 		driver.get("https://practice.expandtesting.com/login");
-		
+		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id=\"username\"]")).sendKeys("practice");
 		driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("SuperSecretPassword!");
 		driver.findElement(By.xpath("//*[@id=\"login\"]/button")).submit();
 		driver.findElement(By.xpath("/html/body/main/div[3]/div/a/i")).click();
-		System.out.println("Site has been succesfully Tested");
+		System.out.println("Site has been succesfully Tested: " + driver.getCurrentUrl());
 
 	}
 
